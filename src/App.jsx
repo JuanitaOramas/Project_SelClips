@@ -13,7 +13,7 @@ function App() {
       <div className="App">
         <div>
           <Row>
-            <Col md={3} sm={3} className="bg-dark text-light">
+            <Col md={3} sm={3}>
               <Routes>
                 <Route path="/" element={<Menu />} />
               </Routes>
