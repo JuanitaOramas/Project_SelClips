@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/Homepage';
 import Registerpage from './pages/Registerpage';
+import Loginpage from './pages/Loginpage';
 import Menu from './components/Menu';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -21,7 +22,13 @@ function App() {
             <Col md={9} sm={9}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
+
+              </Routes>
+            </Col>
+            <Col md={12} sm={12}>
+              <Routes>
                 <Route path="/register" element={<Registerpage />} />
+                <Route path="/login" element={<Loginpage />} />
               </Routes>
             </Col>
           </Row>
