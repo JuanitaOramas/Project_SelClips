@@ -1,6 +1,7 @@
 import "./Registerpage.css";
 import { registerUser } from "../services/registerUser";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export function Registerpage() {
   const onSubmit = (data) => {
@@ -166,8 +167,8 @@ export function Registerpage() {
                         </div>
 
                         <div class="d-flex align-items-center justify-content-center pb-4">
-                          <p class="mb-0 me-2">Don't have an account?</p>
-                          <button type="button" class="btn btn-outline-danger">Create new</button>
+                          <p class="mb-0 me-2">Already have an account?</p>
+                          <Link to="/login"><button type="button" class="btn btn-outline-danger">Log in</button></Link>
                         </div>
 
                       </form>
