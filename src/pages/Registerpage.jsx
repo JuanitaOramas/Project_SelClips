@@ -3,6 +3,8 @@ import { registerUser } from "../services/registerUser";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import logoSelfClips from '../logoSelfClips.png';
+
 export function Registerpage() {
   const onSubmit = (data) => {
     registerUser(data);
@@ -123,7 +125,7 @@ export function Registerpage() {
 
   return (
     <div>
-      <section class="h-100 gradient-form" >
+      <section class="h-100 login-form" >
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-xl-10">
@@ -133,40 +135,49 @@ export function Registerpage() {
                     <div class="card-body p-md-5 mx-md-4">
 
                       <div class="text-center">
-                        {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                    style="width: 185px;" alt="logo"> */}
-                        <h4 class="mt-1 mb-5 pb-1">Welcome to Selfclips!</h4>
+                        <br/><br/>
+                        <h4 class="mt-1 mb-5 pb-1"><strong>Welcome to Selfclips!</strong></h4>
                       </div>
 
                       <form>
-                        <p>Please login to your account</p>
-
-
-
+                        <p class ="paragraph"><strong>Please login to your account</strong></p>
                         <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example11">Username</label>
-                          <input type="email" id="form2Example11" class="form-control"
-                            placeholder="Phone number or email address" />
-                        </div>
-
-                        <div class="form-outline mb-4">
-                        <label class="form-label" for="form2Example22">Password</label>
-                          <input type="password" id="form2Example22" class="form-control" />
-                          
+                        
+                        <label class="form-label " for="form2Example11">Username</label>
+                          <input type="text" class="form-control" placeholder="username" value={name} onChange={handleNameChange}/>
+                          {nameError && <span className="error" role="alert">{nameError}</span>}
                         </div>
 
                         <div class="form-outline mb-4">
                         <label class="form-label" for="form2Example11">Email</label>
                           <input type="email" id="form2Example11" class="form-control"
-                            placeholder="Phone number or email address" />
+                            placeholder="example@mail.com" value={email} onChange={handleEmailChange}/>
+                            {emailError && <span className="error" role="alert">{emailError}</span>}
                         </div>
 
-                        <div class="text-center pt-1 mb-5 pb-1">
-                          <button class="btn  btn-block fa-lg gradient-custom-2 mb-3" type="button">Register</button>
-                         
+                        <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example22">Password</label>
+                          <input type="password" id="form2Example22" class="form-control"  value={password} onChange={handlePasswordChange}/>
+                          {passwordError && <span className="error" role="alert">{passwordError}</span>}
                         </div>
 
-                        <div class="d-flex align-items-center justify-content-center pb-4">
+                        <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example22">Repeat Password</label>
+                          <input type="password" id="form2Example22" class="form-control"value={passwordCheck} onChange={handlePasswordCheckChange} />
+                          {passwordCheckError && <span className="error" role="alert">{passwordCheckError}</span>}
+                        </div>
+
+                        <div class="text-center">
+                          <label>
+                            <input class="form-check-input  custom-checkbox-color" type="checkbox"   value={terms} onChange={handleTermsChange}/>  Accept terms & conditions
+                            {termsError && <span className="error" role="alert">{termsError}</span>}
+                          </label>
+                        </div>
+
+                        <div class="text-center pt-1 mb-2 pb-1">
+                          <button class="btn  btn-block fa-lg gradient-custom-3 mb-3" type="button" disabled = {!isFormValid}>Register</button>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center ">
                           <p class="mb-0 me-2">Already have an account?</p>
                           <Link to="/login"><button type="button" class="btn btn-outline-danger">Log in</button></Link>
                         </div>
@@ -175,12 +186,13 @@ export function Registerpage() {
 
                     </div>
                   </div>
-                  <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                  
+                  <div class="col-lg-6 d-flex align-items-center gradient-custom-3">
                     <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                      
                       <h4 class="mb-4">We are more than just a company</h4>
                       <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        tempor incididunt ut labore et dolore magna aliqua. </p>
                     </div>
                   </div>
                 </div>
