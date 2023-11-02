@@ -1,15 +1,11 @@
 import "./Loginpage.css"
 import React from "react";
-import {MDBBtn, MDBContainer, MDBRow, MDBCol, MDBInput} from "mdb-react-ui-kit";
+
 import { Link } from "react-router-dom";
 
 function LoginPage() {
   return (
-    <MDBContainer className="my-5 gradient-form">
-
-      <MDBRow>
-
-        <MDBCol col='6' className="mb-5">
+   
           <div>
                 <section class="h-100 gradient-form" >
                   <div class="container py-5 h-100">
@@ -71,11 +67,7 @@ function LoginPage() {
                 </section>
               </div>
 
-        </MDBCol>
-
-      </MDBRow>
-
-    </MDBContainer>
+       
   );
 }
 

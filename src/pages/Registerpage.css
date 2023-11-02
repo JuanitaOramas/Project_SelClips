@@ -1,45 +1,26 @@
-form {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
-  border: solid 1px #eee;
-  border-radius: 0.5rem;
+.gradient-custom-2 {
+
+  /* background: #fccb90; */
+
+  background: -webkit-linear-gradient(to right,rgb(238,221,207), rgb(239,181,180) );
+  
+ 
+  background: linear-gradient(to right,   rgb(238,221,207), rgb(239,181,180) );
+  }
+  
+.btn{
+   color: white!important; 
 }
 
-form > div {
-  margin-bottom: 0.5rem;
-}
 
-label {
-  display: block;
-  margin-bottom: 0.1rem;
-}
-
-input {
-  display: block;
-  padding: 0.5rem;
-  background-color: #ededed;
-  border: none;
-}
-
-span.error {
-  display: block;
-  color: red;
-  font-style: italic;
-  font-size: 0.8rem;
-  margin-top: 0.2rem;
-}
-
-button {
-  background-color: #4b09d2;
-  color: white;
-  font-weight: bold;
-  padding: 0.6rem 1rem;
-  border: none;
-  border-radius: 0.3rem;
-  cursor: pointer;
-}
-
-button:disabled {
-  background-color: #ba9ef0;
-}
+  @media (min-width: 768px) {
+  .gradient-form {
+  height: 100vh !important;
+  }
+  }
+  @media (min-width: 769px) {
+  .gradient-custom-2 {
+  border-top-right-radius: .3rem;
+  border-bottom-right-radius: .3rem;
+  }
+  }

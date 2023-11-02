@@ -3,18 +3,15 @@ import { registerUser } from "../services/registerUser";
 import { useState } from "react";
 
 export function Registerpage() {
-   const onSubmit = (data) => {
-     registerUser(data);
-   };
+  const onSubmit = (data) => {
+    registerUser(data);
+  };
 
   const [email, setEmail] = useState("");
   const [emailError, setEmailError] = useState("");
 
   const [name, setName] = useState("");
   const [nameError, setNameError] = useState("");
-
-  const [age, setAge] = useState("");
-  const [ageError, setAgeError] = useState("");
 
 
   const [password, setPassword] = useState("");
@@ -45,13 +42,13 @@ export function Registerpage() {
   const handleEmailChange = (event) => {
     const value = event.target.value;
     setEmail(value);
-  
+
     const emailError = !value
       ? "email is required"
       : !/\S+@\S+\.\S+/.test(value)
-      ? "email is invalid"
-      : "";
-  
+        ? "email is invalid"
+        : "";
+
     setEmailError(emailError);
     setFormValidation({
       ...formValidation,
@@ -62,10 +59,10 @@ export function Registerpage() {
   const handleNameChange = (event) => {
     const value = event.target.value;
     setName(value);
-  
+
     const nameError = !value
       ? "name is required" : "";
-  
+
     setNameError(nameError);
     setFormValidation({
       ...formValidation,
@@ -73,31 +70,17 @@ export function Registerpage() {
     });
   };
 
-  const handleAgeChange = (event) => {
-    const value = event.target.value;
-    setAge(value);
-    const ageError = !value
-      ? "age is required" 
-      : parseInt(value) < 18
-      ? "you must be above 18 to register"
-      : "";
-  
-    setAgeError(ageError);
-    setFormValidation({
-      ...formValidation,
-      age: ageError
-    });
-  };
+
 
   const handlePasswordChange = (event) => {
     const value = event.target.value;
     setPassword(value);
     const passwordError = !value
-    ? "password is required"
-    : value.length < 5
-    ? "password is too short"
-    : "";
-  
+      ? "password is required"
+      : value.length < 5
+        ? "password is too short"
+        : "";
+
     setPasswordError(passwordError);
     setFormValidation({
       ...formValidation,
@@ -110,9 +93,9 @@ export function Registerpage() {
     const value = event.target.value;
     setPasswordCheck(value);
     const passwordCheckError = value != password
-    ? "passwords do not match"
-    : "";
-  
+      ? "passwords do not match"
+      : "";
+
     setPasswordCheckError(passwordCheckError);
     setFormValidation({
       ...formValidation,
@@ -121,12 +104,12 @@ export function Registerpage() {
   };
 
   const handleTermsChange = (event) => {
-    const checked  = event.target.checked ;
-    setTerms(checked );
-    const termsError = !checked 
-    ? "please read and accept the terms and conditions"
-    : "";
-  
+    const checked = event.target.checked;
+    setTerms(checked);
+    const termsError = !checked
+      ? "please read and accept the terms and conditions"
+      : "";
+
     setTermsError(termsError);
     setFormValidation({
       ...formValidation,
@@ -139,60 +122,72 @@ export function Registerpage() {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            Email
-            <input type="email" placeholder="Email" value={email} onChange={handleEmailChange}/>
-            {emailError && <span className="error" role="alert">{emailError}</span>}
-          </label>
-          
-        </div>
-        <div>
-          <label>
-            Name
-            <input type="text" placeholder="Name" value={name} onChange={handleNameChange} />
-            {nameError && <span className="error" role="alert">{nameError}</span>}
-          </label>
-          <span className="error" role="alert"></span>
-        </div>
-        <div>
-          <label>
-            Age
-            <input type="number" placeholder="Age" value={age} onChange={handleAgeChange} />
-            {ageError && <span className="error" role="alert">{ageError}</span>}
-          </label>
-        </div>
-        <div>
-          <label>
-            Password
-            <input type="password" placeholder="Password" value={password} onChange={handlePasswordChange} />
-            {passwordError && <span className="error" role="alert">{passwordError}</span>}
-          </label>
-        </div>
-        <div>
-          <label>
-            Password check
-            <input type="password" placeholder="Password check"  value={passwordCheck} onChange={handlePasswordCheckChange} />
-          </label>
-          {passwordCheckError && <span className="error" role="alert">{passwordCheckError}</span>}
+      <section class="h-100 gradient-form" >
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+              <div class="card rounded-3 text-black">
+                <div class="row g-0">
+                  <div class="col-lg-6">
+                    <div class="card-body p-md-5 mx-md-4">
 
-        </div>
-        <div>
-          <label>
-            <input type="checkbox" value={terms} onChange={handleTermsChange}/>
-            Accept terms & conditions: Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Pellentesque pharetra, tortor ac placerat
-            elementum, neque libero luctus mi, ut efficitur nisl mauris at nisl.
-            Suspendisse non neque et neque facilisis convallis. Praesent erat
-            magna, sollicitudin eu porttitor ut, tincidunt sit amet urna.
-            Vestibulum congue neque metus.
-            {termsError && <span className="error" role="alert">{termsError}</span>}
-          </label>
-        </div>
+                      <div class="text-center">
+                        {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                    style="width: 185px;" alt="logo"> */}
+                        <h4 class="mt-1 mb-5 pb-1">Welcome to Selfclips!</h4>
+                      </div>
 
-        <button disabled = {!isFormValid}>Sign up</button>
-      </form>
+                      <form>
+                        <p>Please login to your account</p>
+
+
+
+                        <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example11">Username</label>
+                          <input type="email" id="form2Example11" class="form-control"
+                            placeholder="Phone number or email address" />
+                        </div>
+
+                        <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example22">Password</label>
+                          <input type="password" id="form2Example22" class="form-control" />
+                          
+                        </div>
+
+                        <div class="form-outline mb-4">
+                        <label class="form-label" for="form2Example11">Email</label>
+                          <input type="email" id="form2Example11" class="form-control"
+                            placeholder="Phone number or email address" />
+                        </div>
+
+                        <div class="text-center pt-1 mb-5 pb-1">
+                          <button class="btn  btn-block fa-lg gradient-custom-2 mb-3" type="button">Register</button>
+                         
+                        </div>
+
+                        <div class="d-flex align-items-center justify-content-center pb-4">
+                          <p class="mb-0 me-2">Don't have an account?</p>
+                          <button type="button" class="btn btn-outline-danger">Create new</button>
+                        </div>
+
+                      </form>
+
+                    </div>
+                  </div>
+                  <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                    <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                      <h4 class="mb-4">We are more than just a company</h4>
+                      <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
