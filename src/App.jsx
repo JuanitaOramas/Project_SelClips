@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import HomePage from './pages/Homepage';
-import LoginPage from './pages/Loginpage';
+import Registerpage from './pages/Registerpage';
 import Menu from './components/Menu';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -21,7 +21,7 @@ function App() {
             <Col md={9} sm={9}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<Registerpage />} />
               </Routes>
             </Col>
           </Row>

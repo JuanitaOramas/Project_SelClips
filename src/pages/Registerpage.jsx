@@ -1,8 +1,8 @@
-import "./Loginpage.css";
+import "./Registerpage.css";
 import { registerUser } from "../services/registerUser";
 import { useState } from "react";
 
-export function LoginPage() {
+export function Registerpage() {
    const onSubmit = (data) => {
      registerUser(data);
    };
@@ -196,4 +196,4 @@ export function LoginPage() {
     </div>
   );
 }
-export default LoginPage;
+export default Registerpage;
