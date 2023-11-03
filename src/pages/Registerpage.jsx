@@ -124,7 +124,7 @@ export function Registerpage() {
 
 
   return (
-    <div >
+    <div>
       <section class="h-100 login-form" >
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
