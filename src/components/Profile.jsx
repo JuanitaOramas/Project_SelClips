@@ -30,26 +30,30 @@ function Profile(props) {
     <div className='card m-3'>
       <img src={profile.picture} alt="Profile" className="card-img-top" />
       <div className="profile-info">
-        {isNameEditing ? (
-          <input type="text" value={name} onChange={handleNameChange} />
-        ) : (
-          <h2>{name}</h2>
+        <div class = "d-flex">
+          {isNameEditing ? (
+            <input type="text" value={name} onChange={handleNameChange} />
+          ) : (
+            <h2>{name}</h2>
+          )}
+          {isNameEditing ? (
+            <button onClick={handleNameEdit}>Save</button>
+          ) : (
+            <button onClick={handleNameEdit}>Change</button>
         )}
-        {isNameEditing ? (
-          <button onClick={handleNameEdit}>Guardar</button>
-        ) : (
-          <button onClick={handleNameEdit}>Editar</button>
-        )}
-        {isEmailEditing ? (
-          <input type="text" value={email} onChange={handleEmailChange} />
-        ) : (
-          <p>{email}</p>
-        )}
-        {isEmailEditing ? (
-          <button onClick={handleEmailEdit}>Guardar</button>
-        ) : (
-          <button onClick={handleEmailEdit}>Editar</button>
-        )}
+        </div>
+        <div class = "d-flex">
+          {isEmailEditing ? (
+            <input type="text" value={email} onChange={handleEmailChange} />
+          ) : (
+            <p>{email}</p>
+          )}
+          {isEmailEditing ? (
+            <button class="btn btn-primary btn-block fa-lg mb-3" onClick={handleEmailEdit}>Save</button>
+          ) : (
+            <button class="btn btn-primary btn-block fa-lg mb-3" onClick={handleEmailEdit}>Change</button>
+          )}
+        </div>
       </div>
       <div className='col-5'>
         <ComboBox />
