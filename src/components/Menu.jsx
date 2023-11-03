@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
 
 function VerticalMenu() {
   return (
@@ -9,9 +10,10 @@ function VerticalMenu() {
       {/* <Navbar.Toggle aria-controls="navbarNav" className="text-dark"/>
       <Navbar.Collapse  id="navbarNav"> */}
       <Nav className="flex-column">
-        <Nav.Link href="#" active className="text-dark">Home</Nav.Link>
-        <Nav.Link href="#" className="text-dark">Features</Nav.Link>
-        <Nav.Link href="#" className="text-dark">Pricing</Nav.Link>
+        <Link to="/" active className="text-dark">Home</Link>
+        <Link to="/" className="text-dark">Features</Link>
+        <Link to="/" className="text-dark">Pricing</Link>
+        <Link to="/thread" className="text-dark">Thread</Link>
 
       </Nav>
       {/* </Navbar.Collapse> */}
