@@ -6,6 +6,7 @@ import Loginpage from './pages/Loginpage';
 import Menu from './components/Menu';
 import Threadpage from './pages/Threadpage';
 import SpecificThreadpage from './pages/SpecificThreadpage';
+import Profilepage from './pages/Profilepage';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/threads/:id" element={<SpecificThreadpage />} />
                 <Route path="/register" element={<Registerpage />} />
                 <Route path="/login" element={<Loginpage />} />
+                <Route path="/profile" element={<Profilepage />} />
               </Routes>
             </Col>
             {/* <Col md={12} >
