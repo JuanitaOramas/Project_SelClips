@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const infothread= {
       title:"Esto es un foro?",
@@ -21,31 +21,50 @@ const infothread= {
       ]
 }
 
-const onHandleClick = () => {
 
-}
 
 function SpecificThreadpage(props) {
+
+  const [comments, setComments] = useState(infothread.comments);
+  const [newComment, setNewComment] = useState("");
+
+  const handleClick = () => {
+    setComments([...comments,{user:"james",description:newComment}])
+  }
+
   console.log(props);
   return (
-    <div className='container'>
+    <div className='container mt-4'>
       <h2>Foro Questions</h2>
 
-      <h4>{infothread.title}</h4>
-      <p>{infothread.tags.join("-")}</p>
-      <p>{infothread.description} </p>
-      <h5>Comments</h5>
+      <div className='card col-8'>
+        <div className='card-body'> 
+        <h4 className='card-title'>{infothread.title}</h4>
+        <p>{infothread.tags.join("-")}</p>
+        <div className='card-text'>{infothread.description} </div>
+        <h5>Comments</h5>
 
-      <div>
-        { 
-          infothread.comments.map(comment => {
-            return <div> {comment.user}: {comment.description} </div>;
-          })
-        }
+        <div>
+          { 
+            comments.map(comment => {
+              return <div> <strong>{comment.user}:</strong> {comment.description} </div>;
+            })
+          }
+          </div>
+        </div>
       </div>
 
-      <input type="text" className="form-control" />
-      <button className="btn btn-info" onClick={onHandleClick}>Share info</button>
+      <div className="col-8" >
+
+        <input 
+          type="text" 
+          className="form-control mt-4"   
+          value={newComment}
+          onChange={(e) => setNewComment(e.target.value)} 
+          />
+        <button className="btn gradient-custom-2  m-3" onClick={handleClick}>Share comment</button>
+        
+      </div>
 
     </div>
   );
