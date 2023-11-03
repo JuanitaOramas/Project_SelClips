@@ -12,6 +12,7 @@ function VerticalMenu() {
       <Nav className="flex-column">
         <Link to="/" active className="text-dark">Home</Link>
         <Link to="/login" className="text-dark">Login</Link>
+        <Link to="/account" className="text-dark">Account</Link>
         <Link to="/threads" className="text-dark">Thread</Link>
 
       </Nav>
