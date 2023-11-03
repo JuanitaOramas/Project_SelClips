@@ -1,6 +1,6 @@
-import "./Loginpage.css"
+import "./css/Loginpage.css"
 import React from "react";
-
+import myImage from "./logoSelfClips.png";
 import { Link } from "react-router-dom";
 
 function LoginPage() {
@@ -15,10 +15,9 @@ function LoginPage() {
                           <div class="row g-0">
                             <div class="col-lg-6">
                               <div class="card-body p-md-5 mx-md-4">
+                                <img src={myImage} alt="logo" className="centered-image" style={{ width: "90%" }} />
+                              <div class="text-center">
 
-                                <div class="text-center">
-                                  {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                              style="width: 185px;" alt="logo"> */}
                                   <h4 class="mt-1 mb-5 pb-1">Welcome to Selfclips</h4>
                                 </div>
 
@@ -53,6 +52,7 @@ function LoginPage() {
                             </div>
                             <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
                               <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+
                                 <h4 class="mb-4">We are more than just a company</h4>
                                 <p class="small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
