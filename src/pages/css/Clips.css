@@ -1,0 +1,98 @@
+.clips-container {
+  /* background-color: lightblue; */
+  /* 
+    border: dashed 1px;
+    border-color: tan; */
+  align-items: center;
+}
+
+.card-clips {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgb(238, 221, 207);
+  border-radius: 4px;
+  padding: 7px;
+  margin-top: 12px;
+  box-shadow: 0 2px 2px rgb(238, 221, 207);
+
+  max-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.cards-container-clips {
+
+  align-items: center;
+  text-align: center;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.sendIcon {
+  color: rgb(56, 74, 88);
+}
+
+.messagesIcon {
+  color: rgb(152, 197, 187);
+}
+
+.description {
+  font-size: 12px !important;
+  color: black;
+}
+
+.userCreator {
+  color: rgb(56, 74, 88);
+  text-align: left;
+  font-weight: bold;
+}
+
+i {
+  margin: 1.2%;
+}
+
+.sub-card-clips {
+
+  align-items: center;
+
+}
+.title{
+  color: rgb(56, 74, 88);
+}
+
+.sub-card-clips .icons-container {
+  margin: 10px;
+  margin-left: 40%;
+  text-align: end;
+
+}
+
+.cards-container-clips {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.5%;
+  column-gap: 10%;
+}
+
+.card-clips img {
+  max-height: 90% !important;
+  /* Ajusta la altura máxima si es necesario */
+  object-fit: cover !important;
+  /* Controla cómo la imagen se ajusta dentro del contenedor */
+  height: auto !important;
+}
+
+
+@media (max-width: 767px) {
+  .cards-container-clips {
+    grid-template-columns: 1fr;
+  }
+
+
+}
