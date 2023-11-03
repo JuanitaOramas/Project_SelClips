@@ -13,7 +13,7 @@ function VerticalMenu() {
         <Link to="/" active className="text-dark">Home</Link>
         <Link to="/" className="text-dark">Features</Link>
         <Link to="/" className="text-dark">Pricing</Link>
-        <Link to="/thread" className="text-dark">Thread</Link>
+        <Link to="/threads" className="text-dark">Thread</Link>
 
       </Nav>
       {/* </Navbar.Collapse> */}
