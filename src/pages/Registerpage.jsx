@@ -2,7 +2,6 @@ import "./Registerpage.css";
 import { registerUser } from "../services/registerUser";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import logoSelfClips from '../logoSelfClips.png';
 
 export function Registerpage() {
