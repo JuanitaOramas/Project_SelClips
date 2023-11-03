@@ -26,16 +26,14 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/threads" element={<Threadpage />} />
                 <Route path="/threads/:id" element={<SpecificThreadpage />} />
-                <Route path="/register" element={<Registerpage />} />
-                <Route path="/login" element={<Loginpage />} />
               </Routes>
             </Col>
-            {/* <Col md={12} >
+            <Col md={12} >
               <Routes>
                 <Route path="/register" element={<Registerpage />} />
                 <Route path="/login" element={<Loginpage />} />
               </Routes>
-            </Col> */}
+            </Col>
           </Row>
         </div>
       </div>
