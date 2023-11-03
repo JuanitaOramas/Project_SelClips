@@ -5,7 +5,7 @@
     border-color: tan;
 }
 
-.card {
+.card-clips {
     width: 70%;
     align-items: center;
     margin: 0 auto;
@@ -17,9 +17,7 @@
     box-shadow: 0 2px 2px rgb(238,221,207);
 }
 
-.clips-container {
-    /* background-color: rgb(238,221,207); */
-}
+
 
 .cards-container {
     display: flex;

@@ -42,7 +42,7 @@ const Clips = () => {
             >
                 <div className="cards-container">
                     {items.map((item, index) => (
-                        <div className="card" key={index}>
+                        <div className="card-clips" key={index}>
                             <p className="Title">Card #{index}</p>
                             <img src={sleepPhoto} alt="photo" style={{ width: "200px" }} />
                             <p className="Block">Some content</p>
