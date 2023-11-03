@@ -16,10 +16,10 @@ function App() {
         <div>
           <Row>
             <Col md={3} sm={3}>
-              {/* <Menu /> */}
-              <Routes>
+              <Menu />
+              {/* <Routes>
                 <Route path="/" element={<Menu />} />
-              </Routes>
+              </Routes> */}
             </Col>
             <Col md={9} sm={9}>
               <Routes>
@@ -28,11 +28,10 @@ function App() {
                 <Route path="/threads/:id" element={<SpecificThreadpage />} />
               </Routes>
             </Col>
-            <Col md={12} sm={12}>
+            <Col md={12} >
               <Routes>
                 <Route path="/register" element={<Registerpage />} />
                 <Route path="/login" element={<Loginpage />} />
-
               </Routes>
             </Col>
           </Row>

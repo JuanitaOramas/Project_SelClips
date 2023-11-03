@@ -11,8 +11,7 @@ function VerticalMenu() {
       <Navbar.Collapse  id="navbarNav"> */}
       <Nav className="flex-column">
         <Link to="/" active className="text-dark">Home</Link>
-        <Link to="/" className="text-dark">Features</Link>
-        <Link to="/" className="text-dark">Pricing</Link>
+        <Link to="/login" className="text-dark">Login</Link>
         <Link to="/threads" className="text-dark">Thread</Link>
 
       </Nav>
