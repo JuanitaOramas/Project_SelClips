@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import "./Thread.css"
 
 function Thread(props) {
 
@@ -25,14 +26,14 @@ function Thread(props) {
 
   return (
 
-    <div className='card m-3' >
-    <Link to= {`/threads/${index}`} style={{ textDecoration: 'none', color:'black' }}>
-        <h4>{ thread.question }</h4>
-        <p> {thread.description} </p>
-        <small> { thread.tags.join("-") } </small>
-    </Link>
+    <div className='card m-3 col-8 p-4' >
+        <Link to= {`/threads/${index}`} style={{ textDecoration: 'none', color:'black' }}>
+            <h4>{ thread.question }</h4>
+            <p> {thread.description} </p>
+            <small> <strong>tags:</strong> { thread.tags.join("-") } </small>
+        </Link>
 
-    <button className="btn gradient-custom-3 btn-sm " onClick={handleClick} > ❤ {like} </button>
+        <button className="btn gradient-custom-3 btn-sm like-thread mt-2" onClick={handleClick} > ❤ {like} </button>
 
     </div>
 
