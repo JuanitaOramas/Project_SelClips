@@ -1,4 +1,4 @@
-import "./Registerpage.css";
+import "./css/Registerpage.css";
 import { registerUser } from "../services/registerUser";
 import { useState } from "react";
 import { Link } from "react-router-dom";

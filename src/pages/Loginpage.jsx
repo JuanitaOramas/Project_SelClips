@@ -1,4 +1,4 @@
-import "./Loginpage.css"
+import "./css/Loginpage.css"
 import React from "react";
 import myImage from "./logoSelfClips.png";
 import { Link } from "react-router-dom";
