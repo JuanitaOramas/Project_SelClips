@@ -90,10 +90,10 @@ const Modal = () => {
         />
       </DialogContent>
       <DialogActions>
-        <Button onClick={handleClose} color="primary">
+        <Button onClick={handleClose} className='buttons-Modal'  >
           Cancel
         </Button>
-        <Button onClick={handleComment} color="primary">
+        <Button onClick={handleComment} className='buttons-Modal' >
           Comment
         </Button>
       </DialogActions>
