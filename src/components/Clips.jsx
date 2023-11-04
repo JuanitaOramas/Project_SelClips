@@ -3,7 +3,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import './Clips.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import sleepPhoto from "../sleepFoto.png";
-import Modal from './Modal';
+import Modal from '../pages/Components/Modal';
+
 
 const Clips = () => {
     const initialItems = Array.from({ length: 20 });
@@ -47,12 +48,12 @@ const Clips = () => {
                             <div className="sub-card-clips justify-content-center">
                                 <p className="userCreator">@healty</p>
                                 <img className="img" src={sleepPhoto} alt="photo" style={{ width: "200px" }} />
-                                <div className="icons-container justify-content-end">
-                                    <i className="bi bi-chat-dots-fill messagesIcon" onClick={openModal}></i>
-                                    <i className="bi bi-heart-fill" style={{ color: heartColor }}
+                                <div className="icons-container ">
+                                    <Modal />
+                                   <i className="bi bi-heart-fill" style={{ color: heartColor }}
                                     onClick={handleHeartClick}></i>
                                     <i class="bi bi-send-fill sendIcon"></i>
-                                    <Modal isOpen={isModalOpen} toggleModal={closeModal} />
+                                    
                                 </div>
                                 <div> <p className='description'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Nemo, veritatis.</p></div>
