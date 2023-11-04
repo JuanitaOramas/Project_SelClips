@@ -13,7 +13,7 @@ function Profilepage() {
     return(
         <div className='container' >
         <h2>User Profile</h2>
-            <div>
+            <div class='card m-3'>
                 <Profile profile = {profile} />                
             </div>
         </div>

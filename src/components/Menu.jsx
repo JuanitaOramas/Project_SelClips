@@ -7,19 +7,22 @@ import logo from "../logoSelfClips.png";
 
 function VerticalMenu() {
   return (
-    <Navbar bg="body-tertiary" >
-      {/* <a className="navbar-brand text-dark " href="#">Navbar</a> */}
-      {/* <Navbar.Toggle aria-controls="navbarNav" className="text-dark"/>
-      <Navbar.Collapse  id="navbarNav"> */}
-      <Nav className="flex-column">
-        <Link to="/" active className="text-dark">Home</Link>
-        <Link to="/login" className="text-dark">Login</Link>
-        <Link to="/profile" className="text-dark">Account</Link>
-        <Link to="/threads" className="text-dark">Thread</Link>
-
-      </Nav>
-      {/* </Navbar.Collapse> */}
-    </Navbar>
+    <div className="page-container">
+      <Navbar className="sidebar" bg="body-tertiary">
+        <img src={logo} alt="Logo" className="logo" />
+        <Nav className="flex-column">
+          <Link to="/" className="text-dark">Home</Link>
+          <Link to="/login" className="text-dark">Login</Link>
+          <Link to="/account" className="text-dark">Account</Link>
+          <Link to="/threads" className="text-dark">Thread</Link>
+        </Nav>
+      </Navbar>
+      <div className="content-container">
+        <div className="content">
+          {/* Your main content goes here */}
+        </div>
+      </div>
+    </div>
   );
 }
 

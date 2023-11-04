@@ -37,9 +37,9 @@ function Profile(props) {
             <h2>{name}</h2>
           )}
           {isNameEditing ? (
-            <button onClick={handleNameEdit}>Save</button>
+            <button class="btn btn-primary btn-block fa-lg mb-3" onClick={handleNameEdit}>Save</button>
           ) : (
-            <button onClick={handleNameEdit}>Change</button>
+            <button class="btn btn-primary btn-block fa-lg mb-3" onClick={handleNameEdit}>Change</button>
         )}
         </div>
         <div class = "d-flex">

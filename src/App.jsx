@@ -29,6 +29,7 @@ function App() {
                 <Route path="/threads/:id" element={<SpecificThreadpage />} />
                 <Route path="/register" element={<Registerpage />} />
                 <Route path="/login" element={<Loginpage />} />
+                <Route path="/account" element={<Profilepage />} />
               </Routes>
             </Col>
             <Col md={12} >
