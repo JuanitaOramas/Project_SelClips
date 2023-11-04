@@ -57,10 +57,10 @@ const Modal = () => {
   };
 
   return (
-    <div>
-    <Button className="button-modal" variant="outlined" color="primary" onClick={handleClickOpen}>
-      <i className="bi bi-chat-dots-fill messagesIcon"></i>
-    </Button>
+    <div Style ="padding-top:1%" >
+    
+      <i onClick={handleClickOpen} className="bi bi-chat-dots-fill messagesIcon"></i>
+
     <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
       <DialogTitle id="form-dialog-title">Comments</DialogTitle>
       <DialogContent>

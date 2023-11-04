@@ -1,11 +1,11 @@
-.button-modal {
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
+
 
 .icons-container {
     display: flex;
     justify-content: space-evenly;
     margin-left: 0 !important;
+}
+
+.messagesIcon{
+    margin-top: 20%!important;
 }

@@ -46,12 +46,12 @@ const Clips = () => {
                     {items.map((item, index) => (
                         <div className="card-clips" key={index}>
                             <div className="sub-card-clips justify-content-center">
-                                <p className="userCreator">@health</p>
+                                <p className="userCreator">@health_cookie</p>
                                 {/* <img className="img" src={sleepPhoto} alt="photo" style={{ width: "200px" }} /> */}
                                 <iframe  height="280" src="https://www.youtube.com/embed/zBEgoOhBXmY"></iframe>
                                 <div className="icons-container ">
                                     <Modal />
-                                   <i className="bi bi-heart-fill" style={{ color: heartColor }}
+                                   <i className="bi bi-heart-fill heartIcon" style={{ color: heartColor }}
                                     onClick={handleHeartClick}></i>
                                     <i class="bi bi-send-fill sendIcon"></i>
                                     
