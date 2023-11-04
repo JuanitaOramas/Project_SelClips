@@ -45,7 +45,13 @@
 .sidebar a {
   text-decoration: none;
   padding: 10px 0;
-  font-size: 25px;
+  font-size: 18px;
+
+ 
+}
+
+.iconText{
+  color: rgb(56,74,88)!important;
 }
 
 .sidebar a:hover {
