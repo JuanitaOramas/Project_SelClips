@@ -7,17 +7,25 @@ import logo from "../logoSelfClips.png";
 
 function VerticalMenu() {
   return (
-    <div className="page-container">
+
       <Navbar className="sidebar" bg="body-tertiary">
         <img src={logo} alt="Logo" className="logo" />
         <Nav className="flex-column">
-          <Link to="/" className="text-dark">Home</Link>
-          <Link to="/login" className="text-dark">Login</Link>
-          <Link to="/account" className="text-dark">Account</Link>
-          <Link to="/threads" className="text-dark">Thread</Link>
+          <Link to="/" className="text-dark d-flex align-items-center">
+            <i style={{ color: 'rgb(56,74,88) ' }} className="bi bi-house-fill"></i> &nbsp;Home
+          </Link>
+          <Link to="/login" className="text-dark align-items-center">
+           <i style={{ color: 'rgb(56,74,88) ' }} class="bi bi-door-open-fill"></i>&nbsp;Login
+          </Link>
+          <Link to="/account" className="text-dark align-items-center">
+          <i style={{ color: 'rgb(56,74,88) ' }} class="bi bi-person-fill"></i>Profile
+          </Link>
+          <Link to="/threads" className="text-dark align-items-center">
+          <i style={{ color: 'rgb(56,74,88)' }} class="bi bi-chat-square-heart-fill"></i>Forum
+          </Link>
         </Nav>
       </Navbar>
-    </div>
+
   );
 }
 
