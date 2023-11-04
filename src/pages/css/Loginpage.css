@@ -1,3 +1,16 @@
+.login-form{
+  font-size: 14px !important;
+}
+.paragraph{
+  color: rgb(56,74,88);
+  
+}
+
+label{
+  color: rgb(56,74,88);
+}
+
+
 .gradient-custom-2 {
   /* fallback for old browsers */
   background: #fccb90;
@@ -8,6 +21,11 @@
 
     background: linear-gradient(to right,   rgb(238,221,207), rgb(239,181,180) );
 }
+.btn-login{
+  border: white!important;
+  margin-right: 5%;
+}
+
 
 @media (min-width: 768px) {
   .gradient-form {

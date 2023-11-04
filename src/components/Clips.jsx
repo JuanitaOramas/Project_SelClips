@@ -33,6 +33,8 @@ const Clips = () => {
     return (
         <div className="clips-container">
             <h4 className='title'>Your Feed</h4>
+      
+            
             <InfiniteScroll
                 dataLength={items.length}
                 next={fetchMoreData}
