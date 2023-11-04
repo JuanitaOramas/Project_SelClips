@@ -1,105 +1,41 @@
-import React, {useState} from 'react';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogContentText from '@material-ui/core/DialogContentText';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import "./Modal.css"
+import React, { useState } from "react";
+import "./Modal.css";
 
+export default function Modal() {
+  const [modal, setModal] = useState(false);
 
-const mockComments = [
-  {
-    "user": "Sam",
-    "comment": "Great article, very informative!"
-  },
-  {
-    "user": "Emily",
-    "comment": "I love how you emphasize the importance of exercise."
-  },
-  {
-    "user": "Alex",
-    "comment": "This content is so helpful for maintaining a healthy lifestyle."
-  },
-  {
-    "user": "Olivia",
-    "comment": "I appreciate the tips on stress management. It's crucial for mental health."
-  },
-  {
-    "user": "James",
-    "comment": "Thank you for sharing this valuable information!"
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if(modal) {
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
   }
-]
-
-
-const Modal = () => {
-  const [open, setOpen] = useState(false);
-  const [comments, setComments] = useState(mockComments);
-
-  const [newComment, setNewComment] = useState('');
-
-  const handleCommentChange = (event) => {
-    setNewComment(event.target.value);
-  };
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleComment = () => {
-    setComments([...comments,{user:"james",comment:newComment}])
-  };
 
   return (
-    <div Style ="padding-top:1%" >
-    
-      <i onClick={handleClickOpen} className="bi bi-chat-dots-fill messagesIcon"></i>
+    <>
+      <button onClick={toggleModal} className="btn-modal">
+        Open
+      </button>
 
-    <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
-      <DialogTitle id="form-dialog-title">Comments</DialogTitle>
-      <DialogContent>
-        <DialogContentText>
-          
-        {comments.map(comment => {
-          return (
-              <>
-              <div>
-              <strong>{comment.user}:</strong> {comment.comment}
-              </div>
-              </>
-          );
-        })}
-        
-
-        </DialogContentText>
-        <TextField
-          autoFocus
-          margin="dense"
-          id="comment"
-          label="comment"
-          type="comment"
-          fullWidth
-          value={newComment}
-          onChange={handleCommentChange}
-        />
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose} color="primary">
-          Cancel
-        </Button>
-        <Button onClick={handleComment} color="primary">
-          Comment
-        </Button>
-      </DialogActions>
-    </Dialog>
-  </div>
+      {modal && (
+        <div className="modal">
+          <div onClick={toggleModal} className="overlay"></div>
+          <div className="modal-content">
+            <h2>Hello Modal</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+              perferendis suscipit officia recusandae, eveniet quaerat assumenda
+              id fugit.
+            </p>
+            <button className="close-modal" onClick={toggleModal}>
+              CLOSE
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
-
-export default Modal;

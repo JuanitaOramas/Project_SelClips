@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import ComboBox from '../components/ComboBox';
-import profileimg from "./profile.jpg";
-import './profile.css';
 
 function Profile(props) {
   const [isNameEditing, setNameEditing] = useState(false);
@@ -29,49 +27,37 @@ function Profile(props) {
   };
 
   return (
-    <div className="container-profile">
-      <img src={profileimg} alt="profileimg" className="profileimg" />
-      <br/><br/>
-      <div className="d-flex justify-content-center align-items-center flex-column">
+    <div className='card m-3'>
+      <img src={profile.picture} alt="Profile" className="card-img-top" />
+      <div className="profile-info">
         <div class = "d-flex">
           {isNameEditing ? (
-            <input type="text" class="form-control"
-            placeholder="New name" value={name} onChange={handleNameChange} />
+            <input type="text" value={name} onChange={handleNameChange} />
           ) : (
-            <h1>{name}</h1>
+            <h2>{name}</h2>
           )}
           {isNameEditing ? (
-            <button class="btn btn-info pencil" onClick={handleNameEdit}>
-              <i class="bi bi-save-fill "></i>
-            </button>
+            <button class="btn btn-primary btn-block fa-lg mb-3" onClick={handleNameEdit}>Save</button>
           ) : (
-            <button class="btn btn-info pencil" onClick={handleNameEdit}>
-              <i class="bi bi-pencil-fill "></i>
-            </button>
+            <button class="btn btn-primary btn-block fa-lg mb-3" onClick={handleNameEdit}>Change</button>
         )}
         </div>
         <div class = "d-flex">
           {isEmailEditing ? (
-            <input type="email" id="form2Example11" className="form-control"
-            placeholder="example@mail.com" value={email} onChange={handleEmailChange} />
+            <input type="text" value={email} onChange={handleEmailChange} />
           ) : (
             <p>{email}</p>
           )}
           {isEmailEditing ? (
-            <button class="btn btn-info pencil" onClick={handleEmailEdit}>
-              <i class="bi bi-save-fill"></i>
-            </button>
+            <button class="btn btn-primary btn-block fa-lg mb-3" onClick={handleEmailEdit}>Save</button>
           ) : (
-            <button class="btn btn-info pencil" onClick={handleEmailEdit}>
-              <i class="bi bi-pencil-fill"></i>
-            </button>
+            <button class="btn btn-primary btn-block fa-lg mb-3" onClick={handleEmailEdit}>Change</button>
           )}
         </div>
       </div>
-      <div className="d-flex justify-content-center align-items-center">
+      <div className='col-5'>
         <ComboBox />
       </div>
-      <br/><br/>
     </div>
   );
 }
