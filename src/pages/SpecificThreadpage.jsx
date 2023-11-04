@@ -91,11 +91,11 @@ function SpecificThreadpage(props) {
                   <div className="user-comment" >
                     <div className="">
                       <img className="img-comment" src={comment.profile} alt="avatar"/>
-                      <p>{comment.user}</p>
+                      <p className="description-user">{comment.user}</p>
                       
                     </div>
                     <div className="description">
-                      <p>{comment.description} </p>
+                      <p className="description-comment">{comment.description} </p>
                     </div>
                   </div>
                 </li>

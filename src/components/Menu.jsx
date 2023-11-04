@@ -17,11 +17,6 @@ function VerticalMenu() {
           <Link to="/threads" className="text-dark">Thread</Link>
         </Nav>
       </Navbar>
-      <div className="content-container">
-        <div className="content">
-          {/* Your main content goes here */}
-        </div>
-      </div>
     </div>
   );
 }
