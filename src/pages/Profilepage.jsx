@@ -1,19 +1,19 @@
 import React from 'react';
 import Profile from '../components/Profile';
-import ComboBox from '../components/ComboBox';
+import "../components/profile.css";
 
 
 const profile = {
-    name: "James Bond",
-    mail: "james.bond@gmail.com",
-    picture: "https://www.elcarrocolombiano.com/wp-content/uploads/2022/01/kia-ev6-what-car-carro-del-an%CC%83o.jpg"
+    name: "Nicolas Perez",
+    mail: "nicolasperez_stafe@gmail.com",
+    picture: ".\src\profile.jpg"
 };
 
 function Profilepage() {
     return(
-        <div className='container' >
-        <h2>User Profile</h2>
-            <div class='card m-3'>
+        <div className="text-center" >
+            <div className='card m-3 d-flex justify-content-center align-items-center'>
+                <h2 className="mt-4 mb-5 pb-1"><strong>User Profile</strong></h2>
                 <Profile profile = {profile} />                
             </div>
         </div>
