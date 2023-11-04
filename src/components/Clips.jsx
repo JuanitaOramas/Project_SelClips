@@ -6,6 +6,16 @@ import sleepPhoto from "../sleepFoto.png";
 import Modal from '../pages/Components/Modal';
 
 
+const videosId = [
+    "zBEgoOhBXmY",
+    "GCPWUMNRGPs",
+    "KptSiZ4fkRw",
+    "KsV5lO3vy-c",
+    "W5_8Y3cnaFs",
+    "FhdSuDxroOA",
+    "j3MkSzgPGCE",
+]
+
 const Clips = () => {
     const initialItems = Array.from({ length: 20 });
     const initialCount = 1;
@@ -14,7 +24,11 @@ const Clips = () => {
     const [items, setItems] = useState(initialItems);
     const [count, setCount] = useState(initialCount);
     
-    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleRandomSelect = () => {
+        const randomIndex = Math.floor(Math.random() * videosId.length);
+        return videosId[randomIndex];
+      };
 
     const fetchMoreData = () => {
         setTimeout(() => {
@@ -22,12 +36,6 @@ const Clips = () => {
             setCount(count + 1);}, 1500);
     };
     const handleHeartClick = () => {setHeartColor(heartColor === 'red' ? '#EFF3F6' : 'red');
-    };
-
-    const openModal = () => {setIsModalOpen(true);
-    };
-
-    const closeModal = () => {setIsModalOpen(false);
     };
 
 
@@ -48,7 +56,7 @@ const Clips = () => {
                             <div className="sub-card-clips justify-content-center">
                                 <p className="userCreator">@health_cookie</p>
                                 {/* <img className="img" src={sleepPhoto} alt="photo" style={{ width: "200px" }} /> */}
-                                <iframe  height="280" src="https://www.youtube.com/embed/zBEgoOhBXmY"></iframe>
+                                <iframe  height="280" src={`https://www.youtube.com/embed/${handleRandomSelect()}`}></iframe>
                                 <div className="icons-container ">
                                     <Modal />
                                    <i className="bi bi-heart-fill heartIcon" style={{ color: heartColor }}
