@@ -13,7 +13,7 @@ function Profilepage() {
     return(
         <div className="text-center" >
             <div className='card m-3 d-flex justify-content-center align-items-center'>
-                <h2 className="mt-1 mb-5 pb-1"><strong>User Profile</strong></h2>
+                <h2 className="mt-4 mb-5 pb-1"><strong>User Profile</strong></h2>
                 <Profile profile = {profile} />                
             </div>
         </div>
