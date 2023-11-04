@@ -15,7 +15,7 @@ function App() {
       <div className="App">
         <div>
           <Row>
-            <Col md={3} sm={3}>
+            <Col style={{ backgroundColor: 'rgb(238,221,207)' }} md={3} sm={3}>
               <Menu />
               {/* <Routes>
                 <Route path="/" element={<Menu />} />

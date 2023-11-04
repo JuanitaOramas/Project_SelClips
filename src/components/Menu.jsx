@@ -7,7 +7,7 @@ import logo from "../logoSelfClips.png";
 
 function VerticalMenu() {
   return (
-    <div className="page-container">
+    <div className="sidebar">
       <Navbar className="sidebar" bg="body-tertiary">
         <img src={logo} alt="Logo" className="logo" />
         <Nav className="flex-column">
@@ -17,12 +17,9 @@ function VerticalMenu() {
           <Link to="/threads" className="text-dark">Thread</Link>
         </Nav>
       </Navbar>
-      <div className="content-container">
-        <div className="content">
-          {/* Your main content goes here */}
-        </div>
       </div>
-    </div>
+
+
   );
 }
 
