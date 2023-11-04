@@ -38,7 +38,8 @@ function LoginPage() {
                                   </div>
 
                                   <div class="text-center pt-1 mb-5 pb-1">
-                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btn-login" type="button">Log in</button>
+                                    <Link to="/"><button type="button" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btn-login" >Log in</button></Link>
+                                   
                                     <a class="text-muted" href="#!">Forgot password?</a>
                                   </div>
 
