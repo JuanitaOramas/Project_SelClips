@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import InfiniteScroll from "react-infinite-scroll-component";
-import './Clips.css';
+import './css/Clips.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import sleepPhoto from "../sleepFoto.png";
-import Modal from './Modal';
+import Modal from './Components/Modal';
 
 const Clips = () => {
     const initialItems = Array.from({ length: 20 });
@@ -13,7 +13,7 @@ const Clips = () => {
     const [items, setItems] = useState(initialItems);
     const [count, setCount] = useState(initialCount);
     
-    const [isModalOpen, setIsModalOpen] = useState(false);
+   
 
     const fetchMoreData = () => {
         setTimeout(() => {
@@ -23,16 +23,13 @@ const Clips = () => {
     const handleHeartClick = () => {setHeartColor(heartColor === 'red' ? '#EFF3F6' : 'red');
     };
 
-    const openModal = () => {setIsModalOpen(true);
-    };
-
-    const closeModal = () => {setIsModalOpen(false);
-    };
-
+ 
 
     return (
         <div className="clips-container">
+            
             <h4 className='title'>Your Feed</h4>
+           
             <InfiniteScroll
                 dataLength={items.length}
                 next={fetchMoreData}
@@ -48,12 +45,12 @@ const Clips = () => {
                                 <p className="userCreator">@healty</p>
                                 <img className="img" src={sleepPhoto} alt="photo" style={{ width: "200px" }} />
                                 <div className="icons-container justify-content-end">
-                                    <i className="bi bi-chat-dots-fill messagesIcon" onClick={openModal}></i>
-                                    <i className="bi bi-heart-fill" style={{ color: heartColor }}
-                                    onClick={handleHeartClick}></i>
-                                    <i class="bi bi-send-fill sendIcon"></i>
-                                    <Modal isOpen={isModalOpen} toggleModal={closeModal} />
+                                    <i className="bi bi-chat-dots-fill messagesIcon"></i>
+                                    <i className="bi bi-heart-fill" style={{ color: heartColor }} onClick={handleHeartClick}></i>
+                                    <i className="bi bi-send-fill sendIcon"></i>
+                                    
                                 </div>
+
                                 <div> <p className='description'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Nemo, veritatis.</p></div>
                             </div>
