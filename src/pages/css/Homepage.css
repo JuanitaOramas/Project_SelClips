@@ -1,0 +1,15 @@
+
+
+.custom-select {
+    background-color: #EFF3F6!important;
+    border-color: #fff;
+    margin-top: 2%;
+    margin-right: 2%;
+    border-radius: 20px!important;
+
+   
+  }
+
+  .custom-select .dropdown-menu {
+    border-radius: 5px!important;
+  }
