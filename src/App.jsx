@@ -16,10 +16,12 @@ function App() {
         <div>
           <Row>
             <Col md={3} sm={3}>
-              <Menu />
-              {/* <Routes>
+              {/*<Menu />*/}
+               <Routes>
                 <Route path="/" element={<Menu />} />
-              </Routes> */}
+                <Route path="/threads" element={<Menu />} />
+                <Route path="/threads/:id" element={<Menu />} />
+              </Routes>
             </Col>
             <Col md={9} sm={9}>
               <Routes>
