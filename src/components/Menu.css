@@ -45,9 +45,9 @@
 .sidebar a {
   text-decoration: none;
   padding: 10px 0;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .sidebar a:hover {
-  background-color: #555;
+  background-color:  rgb(238,221,207);
 }

@@ -7,7 +7,7 @@ function LoginPage() {
   return (
    
           <div>
-                <section class="h-100 gradient-form" >
+                <section class="h-100 login-form" >
                   <div class="container py-5 h-100">
                     <div class="row d-flex justify-content-center align-items-center h-100">
                       <div class="col-xl-10">
@@ -22,22 +22,24 @@ function LoginPage() {
                                 </div>
 
                                 <form>
-                                  <p>Please login to your account</p>
+                                  <p className ="paragraph">Please login to your account</p>
 
                                   <div class="form-outline mb-4">
+                                  <label class="form-label" for="form2Example11">Username</label>
                                     <input type="email" id="form2Example11" class="form-control"
                                       placeholder="Phone number or email address" />
-                                    <label class="form-label" for="form2Example11">Username</label>
+                                    
                                   </div>
 
                                   <div class="form-outline mb-4">
-                                    <input type="password" id="form2Example22" class="form-control" />
                                     <label class="form-label" for="form2Example22">Password</label>
+                                    <input type="password" id="form2Example22" class="form-control" />
+                                    
                                   </div>
 
                                   <div class="text-center pt-1 mb-5 pb-1">
-                                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
-                                      in</button>
+                                    <Link to="/"><button type="button" class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3 btn-login" >Log in</button></Link>
+                                   
                                     <a class="text-muted" href="#!">Forgot password?</a>
                                   </div>
 

@@ -1,4 +1,4 @@
-.login-form{
+.register-form{
   font-size: 14px !important;
 }
 .paragraph{
@@ -24,7 +24,6 @@ label{
    color: white!important; 
 }
 
-
 /*Buttons*/
 
 .custom-checkbox-color{
@@ -47,7 +46,7 @@ span.error {
 
 
   @media (min-width: 768px) {
-  .login-form {
+  .register-form {
   height: 100vh !important;
   }
   }

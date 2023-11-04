@@ -9,8 +9,8 @@ function VerticalMenu() {
   return (
 
       <Navbar className="sidebar" bg="body-tertiary">
-        <img src={logo} alt="Logo" className="logo" />
-        <Nav className="flex-column">
+        <Link to="/"><img src={logo} alt="Logo" className="logo" /></Link>
+        <Nav  className="flex-column">
           <Link to="/" className="text-dark d-flex align-items-center">
             <i style={{ color: 'rgb(56,74,88) ' }} className="bi bi-house-fill"></i> &nbsp;Home
           </Link>

@@ -2,7 +2,6 @@ import "./css/Registerpage.css";
 import { registerUser } from "../services/registerUser";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-
 import logoSelfClips from '../logoSelfClips.png';
 
 export function Registerpage() {
@@ -125,7 +124,7 @@ export function Registerpage() {
 
   return (
     <div>
-      <section className="h-100 login-form" >
+      <section className="h-100 register-form" >
         <div className="container py-5 h-100">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-xl-10">
