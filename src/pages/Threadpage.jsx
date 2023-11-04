@@ -44,8 +44,21 @@ const threads = [
   {
     question:<span style={{ color: 'rgb(56,74,88)' }}>Health is a state of body. Wellness is a state of being.</span> ,
     tags: ["health", "body"],
-    likes: 8,
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iste molestiae quibusdam ex eligendi debitis!",
+    likes: 7,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iste molestiae quibusdam ex eligendi debitis!. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    comments: [
+      {
+        user: "2pac",
+        description: "great forum bro",
+        likes: 2
+      }
+    ]
+  },
+  {
+    question:<span style={{ color: 'rgb(56,74,88)' }}>The first wealth is health.</span> ,
+    tags: ["health", "body"],
+    likes: 15,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iste molestiae quibusdam ex eligendi debitis!. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     comments: [
       {
         user: "2pac",
@@ -54,6 +67,8 @@ const threads = [
       }
     ]
   }
+
+ 
 ];
 
 

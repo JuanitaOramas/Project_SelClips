@@ -15,6 +15,15 @@ i {
     border: 1px solid rgb(0, 0, 0);
 }
 
+
+.colorComments li {
+    color: rgb(56,74,88);
+    background-color: #EFF3F6;
+    border-radius: 20px;
+    margin-bottom: 4%;
+    margin-top: 1%;
+  }
+
 .description {
     margin-left:10px;
 }
