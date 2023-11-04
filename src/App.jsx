@@ -22,6 +22,7 @@ function App() {
                 <Route path="/" element={<Menu />} />
                 <Route path="/threads" element={<Menu />} />
                 <Route path="/threads/:id" element={<Menu />} />
+                <Route path="/account" element={<Menu />} />
               </Routes>
             </Col>
             <Col md={9} sm={9}>
