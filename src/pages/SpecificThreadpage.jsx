@@ -3,19 +3,20 @@ import { useParams } from 'react-router-dom';
 import "./css/SpecificThreadpage.css"
 
 const infothread= {
-      title:"Esto es un foro?",
-      tags:["health", "eye", "head", "ear", "vision"],
+      title:"Is this a Threat?",
+      tags:["health", "eye", "head", "ear", "vision","body" ],
       likes: 15,
       description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis eaque error eum accusamus doloremque! Numquam et ea voluptas, laboriosam dolorum unde repellat vel quae aliquam neque quaerat facilis delectus nisi.",
       comments: [
         {
           user:"sam",
-          description:"test",
-          profile: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsSVzcOZEqLQk9Ma142okaHnitwOAvlaCgTw&usqp=CAU"
+          description:"Yes, I think so..",
+          profile: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsSVzcOZEqLQk9Ma142okaHnitwOAvlaCgTw&usqp=CAU",
+          style: { backgroundcolor: "gray" }
         },
         {
           user:"tom",
-          description:"su comentarioo",
+          description:"Your comment",
           profile: "https://media.karousell.com/media/photos/products/2023/2/23/female_personal_trainer_pasir__1677119828_9113f322_progressive.jpg"
 
         },

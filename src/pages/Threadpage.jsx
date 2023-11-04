@@ -3,7 +3,7 @@ import Thread from '../components/Thread';
 
 const threads = [
   {
-    question: "Esto es un foro?",
+    question: <span style={{ color: 'rgb(56,74,88)' }}>Is this a Threat?</span>,
     tags: ["health", "eye", "head", "ear", "vision"],
     likes: 15,
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iste molestiae quibusdam ex eligendi debitis!",
@@ -16,7 +16,7 @@ const threads = [
     ]
   },
   {
-    question: "Otro ejemplo de pregunta sobre salud ocular.",
+    question: <span style={{ color: 'rgb(56,74,88)' }}>The greatest wealth is health.</span>,
     tags: ["health", "eye"],
     likes: 10,
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iste molestiae quibusdam ex eligendi debitis!",
@@ -29,8 +29,21 @@ const threads = [
     ]
   },
   {
-    question: "¿Cómo cuidar la salud auditiva?",
+    question:<span style={{ color: 'rgb(56,74,88)' }}>¿Cómo cuidar la salud auditiva?</span> ,
     tags: ["health", "ear"],
+    likes: 8,
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iste molestiae quibusdam ex eligendi debitis!",
+    comments: [
+      {
+        user: "2pac",
+        description: "great forum bro",
+        likes: 2
+      }
+    ]
+  }, 
+  {
+    question:<span style={{ color: 'rgb(56,74,88)' }}>Health is a state of body. Wellness is a state of being.</span> ,
+    tags: ["health", "body"],
     likes: 8,
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iste molestiae quibusdam ex eligendi debitis!",
     comments: [

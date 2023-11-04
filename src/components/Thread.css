@@ -1,3 +1,14 @@
 .like-thread {
     width: 10%;
 }
+
+.colorTag{
+    background-color: #EFF3F6;
+}
+
+.colorChange{
+    box-shadow: 6px 6px 4px -3px rgba(56,74,88,0.64);
+  -webkit-box-shadow: 6px 12px 4px -3px rgba(56,74,88,0.64);
+  -moz-box-shadow: 6px 6px 4px -3px rgba(56,74,88,0.64);
+
+}

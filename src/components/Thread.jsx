@@ -26,11 +26,14 @@ function Thread(props) {
 
   return (
 
-    <div className='card m-3 col-8 p-4' >
+    <div className='card m-3 col-8 p-4 colorChange' >
         <Link to= {`/threads/${index}`} style={{ textDecoration: 'none', color:'black' }}>
             <h4>{ thread.question }</h4>
             <p> {thread.description} </p>
+            <div className='colorTag'>
             <small> <strong>tags:</strong> { thread.tags.join("-") } </small>
+            </div>
+            
         </Link>
 
         <button className="btn gradient-custom-3 btn-sm like-thread mt-2" onClick={handleClick} > ❤ {like} </button>
