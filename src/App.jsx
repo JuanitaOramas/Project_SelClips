@@ -16,7 +16,7 @@ function App() {
       <div className="App">
         <div>
           <Row>
-            <Col md={3} sm={3}>
+            <Col style={{ backgroundColor: 'rgb(238,221,207)' }} md={2} sm={2}>
               {/*<Menu />*/}
                <Routes>
                 <Route path="/" element={<Menu />} />
@@ -25,7 +25,7 @@ function App() {
                 <Route path="/account" element={<Menu />} />
               </Routes>
             </Col>
-            <Col md={9} sm={9}>
+            <Col md={10} sm={10}>
               <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/threads" element={<Threadpage />} />

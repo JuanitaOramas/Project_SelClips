@@ -12,8 +12,21 @@ i {
     height: 40px;
     border-radius: 30%;
     object-fit: cover;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .description {
     margin-left:10px;
 }
+
+.description-user {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: wavy;
+    text-align: center;
+}
+
+.description-comment {
+    font-size: 15px;
+}
+

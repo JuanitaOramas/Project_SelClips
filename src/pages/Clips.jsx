@@ -28,6 +28,8 @@ const Clips = () => {
     return (
         <div className="clips-container">
             
+            
+            
             <h4 className='title'>Your Feed</h4>
            
             <InfiniteScroll
@@ -50,7 +52,6 @@ const Clips = () => {
                                     <i className="bi bi-send-fill sendIcon"></i>
                                     
                                 </div>
-
                                 <div> <p className='description'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
                                 Nemo, veritatis.</p></div>
                             </div>
