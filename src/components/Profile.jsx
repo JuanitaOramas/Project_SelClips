@@ -29,8 +29,8 @@ function Profile(props) {
   };
 
   return (
-    <div>
-      <img src={profileimg} alt="profileimg" className="card profileimg" />
+    <div className="container-profile">
+      <img src={profileimg} alt="profileimg" className="profileimg" />
       <br/><br/>
       <div className="d-flex justify-content-center align-items-center flex-column">
         <div class = "d-flex">
@@ -41,12 +41,12 @@ function Profile(props) {
             <h1>{name}</h1>
           )}
           {isNameEditing ? (
-            <button class="btn btn-info" onClick={handleNameEdit}>
-              <i class="bi bi-save-fill"></i>
+            <button class="btn btn-info pencil" onClick={handleNameEdit}>
+              <i class="bi bi-save-fill "></i>
             </button>
           ) : (
-            <button class="btn btn-info" onClick={handleNameEdit}>
-              <i class="bi bi-pencil-fill"></i>
+            <button class="btn btn-info pencil" onClick={handleNameEdit}>
+              <i class="bi bi-pencil-fill "></i>
             </button>
         )}
         </div>
@@ -58,11 +58,11 @@ function Profile(props) {
             <p>{email}</p>
           )}
           {isEmailEditing ? (
-            <button class="btn btn-info" onClick={handleEmailEdit}>
+            <button class="btn btn-info pencil" onClick={handleEmailEdit}>
               <i class="bi bi-save-fill"></i>
             </button>
           ) : (
-            <button class="btn btn-info" onClick={handleEmailEdit}>
+            <button class="btn btn-info pencil" onClick={handleEmailEdit}>
               <i class="bi bi-pencil-fill"></i>
             </button>
           )}
