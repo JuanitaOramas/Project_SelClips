@@ -6,6 +6,12 @@
   align-items: center;
 }
 
+.iframe-clip {
+
+  overflow: hidden;
+
+}
+
 .card-clips {
   width: 100%;
   text-align: center;

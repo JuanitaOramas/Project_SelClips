@@ -33,7 +33,7 @@ function Profile(props) {
       <img src={profileimg} alt="profileimg" className="profileimg" />
       <br/><br/>
       <div className="d-flex justify-content-center align-items-center flex-column">
-        <div class = "d-flex">
+        <div className = "d-flex">
           {isNameEditing ? (
             <input type="text" class="form-control"
             placeholder="New name" value={name} onChange={handleNameChange} />
@@ -50,7 +50,7 @@ function Profile(props) {
             </button>
         )}
         </div>
-        <div class = "d-flex">
+        <div className = "d-flex">
           {isEmailEditing ? (
             <input type="email" id="form2Example11" className="form-control"
             placeholder="example@mail.com" value={email} onChange={handleEmailChange} />

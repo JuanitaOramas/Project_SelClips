@@ -16,6 +16,11 @@ const videosId = [
     "j3MkSzgPGCE",
 ]
 
+const imageId = [
+    "https://i.pinimg.com/564x/1c/96/e9/1c96e9dc6767dab842a2ab427a7d28ed.jpg",
+    "https://i.pinimg.com/564x/e8/5e/4d/e85e4d71e82eb4a79816fbb91ada8f27.jpg"
+]
+
 const Clips = () => {
     const initialItems = Array.from({ length: 20 });
     const initialCount = 1;
@@ -30,6 +35,11 @@ const Clips = () => {
         return videosId[randomIndex];
       };
 
+      const handleRandomImage = () => {
+        const randomIndex = Math.floor(Math.random() * imageId.length);
+        return imageId[randomIndex];
+      };
+
     const fetchMoreData = () => {
         setTimeout(() => {
             setItems([...items, ...Array.from({ length: 20 })]);
@@ -37,6 +47,11 @@ const Clips = () => {
     };
     const handleHeartClick = () => {setHeartColor(heartColor === 'red' ? '#EFF3F6' : 'red');
     };
+
+    const generateRandomBoolean = () => {
+        const randomBoolean = Math.random() < 0.5; // Genera un número aleatorio entre 0 y 1 y compara si es menor que 0.5
+        return randomBoolean
+      };
 
 
     return (
@@ -57,13 +72,20 @@ const Clips = () => {
                         <div className="card-clips" key={index}>
                             <div className="sub-card-clips justify-content-center">
                                 <p className="userCreator">@health_cookie</p>
-                                {/* <img className="img" src={sleepPhoto} alt="photo" style={{ width: "200px" }} /> */}
-                                <iframe  height="280" src={`https://www.youtube.com/embed/${handleRandomSelect()}`}></iframe>
+                                {
+                                    generateRandomBoolean() 
+                                    ? 
+                                    <img className="img" src={handleRandomImage()} alt="photo" style={{ width: "200px" }} />
+                                    :
+                                    <iframe className="iframe-clip" height="280" src={`https://www.youtube.com/embed/${handleRandomSelect()}`}></iframe>
+                                }
+                                
+                                
                                 <div className="icons-container ">
                                     <Modal />
                                    <i className="bi bi-heart-fill heartIcon" style={{ color: heartColor }}
                                     onClick={handleHeartClick}></i>
-                                    <i class="bi bi-send-fill sendIcon"></i>
+                                    <i className="bi bi-send-fill sendIcon"></i>
                                     
                                 </div>
                                 <div> <p className='description'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
